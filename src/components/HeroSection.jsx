@@ -1,34 +1,35 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import { styled } from 'styled-components';
-import { Button } from './styles/Button';
-const HeroSection = () => {
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { styled } from "styled-components";
+import { Button } from "./styles/Button";
+const HeroSection = ( {name, image}) => {
   return (
     <Wrapper>
-        <div className="container grid grid-two-column">
-            <div className="section-hero-data">
-                <p className='hero-top-data'>THIS IS ME</p>
-                <h1 className='hero-heading'>KHIZZ TECHNICAL</h1>
-                <p className='hero-para'>
-                    I am khizar riaz. A web developer and freelancer. Also a web and software engineering student.
-                </p>
-                <Button className="btn hireme-btn">
-                <NavLink to="/contact">hire me</NavLink>
-            </Button>
-            </div>
-
-            <div className="section-hero-image">
-                <picture>
-                    <img src="../../public/images/hero.svg" alt='hero image' className='hero-img' />
-                </picture>  
-            </div>
+      <div className="container grid grid-two-column">
+        <div className="section-hero-data">
+          <p className="hero-top-data">THIS IS ME</p>
+          <h1 className="hero-heading">{name}</h1>
+          <p className="hero-para">
+            I am khizar riaz. A web developer and freelancer. Also a web and
+            software engineering student.
+          </p>
+          <Button className="btn hireme-btn">
+            <NavLink to="/contact">hire me</NavLink>
+          </Button>
         </div>
+
+        <div className="section-hero-image">
+          <picture>
+            <img src={image} alt="hero image" className="hero-img" />
+          </picture>
+        </div>
+      </div>
     </Wrapper>
-  )
+  );
 };
 
 const Wrapper = styled.section`
-padding: 9rem 0;
+  padding: 9rem 0;
 
   .section-hero-data {
     display: flex;
@@ -78,4 +79,4 @@ padding: 9rem 0;
     }
   }
 `;
-export default HeroSection
+export default HeroSection;
