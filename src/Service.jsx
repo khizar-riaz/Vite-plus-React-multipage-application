@@ -27,7 +27,7 @@ const Service = () => {
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <NavLink to="/service">
-                  <button className="btn">Read More</button>
+                  <Button className="btn">Read More</Button>
                 </NavLink>
               </div>
             </div>
