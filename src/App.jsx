@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import ErrorPage from './ErrorPage'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './components/GlobalStyle'
+import GoToTop from './components/GoToTop'
 function App() {
   const theme = {
     colors: {
@@ -44,6 +45,7 @@ function App() {
     <Route path='/contact' element={<Contact/>}/>
     <Route path='*' element={<ErrorPage/>}/>
    </Routes>
+   <GoToTop/>
    <Footer/>
    </BrowserRouter>
    </ThemeProvider>

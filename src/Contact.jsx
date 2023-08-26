@@ -51,7 +51,11 @@ const Contact = () => {
       ></iframe>
       <div className="container">
         <div className="contact-form">
-          <form action="https://formspree.io/f/meqbgvwr" method="POST" className="contact-inputs">
+          <form
+            action="https://formspree.io/f/meqbgvwr"
+            method="POST"
+            className="contact-inputs"
+          >
             <input
               type="text"
               name="username"
