@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import HeroSection from './components/HeroSection';
 import { useGlobalContext } from './context';
+import Service from './Service';
+import Contact from './Contact';
+import About from './About';
 
 const Home = () => {
   // const data = {
@@ -14,7 +17,12 @@ const Home = () => {
   UpdateHomePage(), []);
 
   return (
+    <>
    <HeroSection/>
+   <Service/>
+   <Contact/>  
+    </>
+  
   )
 };
 
