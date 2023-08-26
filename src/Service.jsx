@@ -1,47 +1,45 @@
-import React from 'react'
-import { useGlobalContext } from './context';
-import { styled } from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { useGlobalContext } from "./context";
+import { styled } from "styled-components";
+import { NavLink } from "react-router-dom";
 import { Button } from "./components/styles/Button";
 
 const Service = () => {
-
-  const {services} = useGlobalContext();
+  const { services } = useGlobalContext();
 
   // Limit the services to the first 20 objects
   const limitedServices = services.slice(0, 21);
 
   console.log(limitedServices);
-  return <Wrapper className= "section">
-      <h2 className='common-heading'>Our Services</h2>
-      <div className='container grid grid-three-column' >
-       {
-        limitedServices.map((curElem) => {
-          const { id, title, url, description} = curElem;
+  return (
+    <Wrapper className="section">
+      <h2 className="common-heading">Our Services</h2>
+      <div className="container grid grid-three-column">
+        {limitedServices.map((curElem) => {
+          const { id, title, url, description } = curElem;
 
-          return(
-            <div key={id} className='card'>
-                 <figure>
-                  <img src={url} alt={title} />
-                 </figure>
-                 <div className='card-data'>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <NavLink to="/service">
-                    <button className='btn'>Read More</button>
-                  </NavLink>
-                  </div>
+          return (
+            <div key={id} className="card">
+              <figure>
+                <img src={url} alt={title} />
+              </figure>
+              <div className="card-data">
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <NavLink to="/service">
+                  <button className="btn">Read More</button>
+                </NavLink>
+              </div>
             </div>
-          )
-
+          );
         })}
       </div>
-  </Wrapper>
+    </Wrapper>
+  );
 };
 
-
 const Wrapper = styled.section`
-padding: 9rem 0;
+  padding: 9rem 0;
   background-color: ${({ theme }) => theme.colors.bg};
 
   .container {
@@ -122,4 +120,4 @@ padding: 9rem 0;
     }
   }
 `;
-export default Service
+export default Service;
