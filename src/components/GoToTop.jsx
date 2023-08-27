@@ -78,7 +78,7 @@ const Wrapper = styled.section`
       right: 0;
       left: 40%;
     }
-  }
+  } 
 `;
 
 export default GoToTop;
