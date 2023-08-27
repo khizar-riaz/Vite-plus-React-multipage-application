@@ -8,7 +8,7 @@ const Service = () => {
   const { services } = useGlobalContext();
 
   // Limit the services to the first 20 objects
-  const limitedServices = services.slice(0, 12);
+   const limitedServices = services.slice(0, 12);
 
   console.log(limitedServices);
   return (
