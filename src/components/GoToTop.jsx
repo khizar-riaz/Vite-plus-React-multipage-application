@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { styled } from 'styled-components';
+import React, { useEffect, useState } from "react";
+import { styled } from "styled-components";
 import { FaArrowUp } from "react-icons/fa";
-
 
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,7 +73,12 @@ const Wrapper = styled.section`
       }
     }
   }
-
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .top-btn {
+      right: 0;
+      left: 40%;
+    }
+  }
 `;
 
 export default GoToTop;

@@ -27,7 +27,7 @@ const Footer = () => {
       <footer>
         <div className="container grid grid-four-column">
           <div className="footer-about">
-            <h3>Khizz Technical</h3>
+            <h3>Thapa Technical</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
           </div>
 
@@ -56,12 +56,11 @@ const Footer = () => {
                 <FaInstagram className="icons" />
               </div>
               <div>
-                {/* <a
-                  href="#"
-                  target="_blank"
-                > */}
+                <a
+                  href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                  target="_blank">
                   <FaYoutube className="icons" />
-                {/* </a> */}
+                </a>
               </div>
             </div>
           </div>
@@ -69,7 +68,7 @@ const Footer = () => {
           {/* 4th column  */}
           <div className="footer-contact">
             <h3>Call Us</h3>
-            <h3>+49 12345678978</h3>
+            <h3>+91 12345678978</h3>
           </div>
         </div>
 
@@ -78,7 +77,7 @@ const Footer = () => {
           <hr />
           <div className="container grid grid-two-column">
             <p>
-              @{new Date().getFullYear()} KhizzTechnical. All Rights Reserved
+              @{new Date().getFullYear()} ThapaTechnical. All Rights Reserved
             </p>
             <div>
               <p>PRIVACY POLICY</p>
@@ -90,6 +89,7 @@ const Footer = () => {
     </Wrapper>
   );
 };
+
 const Wrapper = styled.section`
   .contact-short {
     max-width: 60vw;
@@ -142,6 +142,25 @@ const Wrapper = styled.section`
         color: ${({ theme }) => theme.colors.hr};
         height: 0.1px;
       }
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .contact-short {
+      max-width: 95vw;
+      padding: 2rem 0rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .contact-short-btn {
+        text-align: center;
+        justify-self: flex-start;
+      }
+    }
+
+    footer .footer-bottom--section {
+      padding-top: 3.2rem;
     }
   }
 `;
